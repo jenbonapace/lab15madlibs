@@ -1,7 +1,9 @@
-var app=angular.module("Mod");
+var app = angular.module("Mod");
 
 app.controller("controller2", function($scope, ourFactory) {
+    console.log('ctrl2 is running');
 
-  $scope.output= ourFactory.anotherFunction();
-
+      // put the output from the service on the $scope.
+    $scope.output = ourFactory.getData();
+    //this function is () because 
 });

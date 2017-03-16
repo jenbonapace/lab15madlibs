@@ -4,10 +4,12 @@ app.factory('ourFactory', function() {
     var myObj = {};
 
     return {
-        ourFunction: function(parameter) {
-            myObj = parameter;
+        // Gives data to the service. from the form elements but these do not depend on the names matching but rather the position of the parameter in comparison to the funtioncs
+        setData: function(form) {
+            myObj = form;
         },
-        anotherFunction: function() {
+        // Gets the data out of the service returning the object
+        getData: function() {
             return myObj;
         }
     }
